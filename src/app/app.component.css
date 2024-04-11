@@ -1,0 +1,81 @@
+nav h1{
+    width: 200px;
+    height: 20px;
+    margin-top: 30px;
+    margin-left: 80px;
+    font-size: 20px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    background-color:brown;
+    color:white;
+}
+nav ul{
+    float:right;
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 10px;
+    color:white;    list-style: none;
+}
+nav ul li a{
+    color: white;
+    font-size: 10px1;
+    transition: .5s;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+a:hover{
+    background-color: #297bb2;
+    color: white;
+}
+.checkbtn{
+    float: right;
+    line-height: 80px;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+section{
+    
+  
+    width: 100%;
+}
+section img{
+    width: 100%;
+}
+
+@media screen and (max-width: 600px){
+    nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    justify-content: center;
+    padding: 0 10px;
+    background-color:rgb(197, 56, 56);
+    color: white;
+}
+nav ul{
+    float:right;
+    list-style: none;
+   
+    font-size: 11.1px;
+}
+nav h1{
+    width: 200px;
+    height: 20px;
+    margin-top: 30px;
+    margin-left: 130px;
+}
+}

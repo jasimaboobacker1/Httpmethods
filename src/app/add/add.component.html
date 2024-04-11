@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="form">
+      <form class="formmm" (ngSubmit)="onSubmit()" [formGroup]="form">
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" formControlName="name">
+          <div *ngIf="formSubmitted && form.get('name')?.errors?.['required']" class="inv">Name is required</div>
+        </div>
+        <div>
+          <label for="username">Username</label>
+          <input type="text" id="username" formControlName="username">
+          <div *ngIf="formSubmitted && form.get('username')?.errors?.['required']" class="inv">Username is required</div>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="text" id="email" formControlName="email">
+          <div *ngIf="formSubmitted && form.get('email')?.errors?.['required']" class="inv">Email is required</div>
+        </div>
+        <div>
+          <label for="phone">Phone number</label>
+          <input type="text" id="phone" formControlName="phone">
+          <div *ngIf="formSubmitted && form.get('phone')?.errors?.['required']" class="inv">Phone number is required</div>
+        </div>
+        <div>
+          <label for="companyname">Company name</label>
+          <input type="text" id="companyname" formControlName="companyname">
+          <div *ngIf="formSubmitted && form.get('companyname')?.errors?.['required']" class="inv">Company name is required</div>
+        </div>
+        <div style="margin-top: 20px;">
+          <button type="submit">Add details</button>
+        </div>
+      </form>
+    </div>
+    <div class="lower">
+        <div *ngIf="submissionStatus === 'Success'" class="success" style="font-size: 20px;">Details added  successfully</div>
+        <div *ngIf="submissionStatus === 'Error'" class="error">An error occurred</div>
+        <div *ngIf="Submittedshow">
+          <p>Name: {{ form.get('name')?.value }}</p>
+          <p>Username: {{ form.get('username')?.value }}</p>
+          <p>Email: {{ form.get('email')?.value }}</p>
+          <p>Phone number: {{ form.get('phone')?.value }}</p>
+          <p>Company name: {{ form.get('companyname')?.value }}</p>
+        </div>      </div>
+  </div>
+  
