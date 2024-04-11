@@ -33,12 +33,11 @@ export class AddComponent implements OnInit {
     this.formSubmitted = true;
     if (this.form.valid) {
       const formValue = this.form.value;
-      this.submissionStatus = 'Submitting';
       this.dataService.saveUserDetails(formValue).subscribe(
         (res) => {
           this.submissionStatus = 'Success';
           this.submissionResponse = res;
-          this.Submittedshow=true
+          this.Submittedshow=true;
         },
         (error) => {
           this.submissionStatus = 'Error';
@@ -50,5 +49,4 @@ export class AddComponent implements OnInit {
       this.form.markAllAsTouched();
     }
   }
-  
 }
