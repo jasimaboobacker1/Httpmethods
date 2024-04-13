@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { DataService } from '../Services/data.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -20,7 +21,7 @@ export class ViewComponent  {
   showIdTable:boolean=false;
   userId: number=0;
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService,private router:Router) { }
 
   
 
@@ -51,6 +52,20 @@ export class ViewComponent  {
     );
   }
 
+  Delete(id:number){
+      this.dataService.deleteUserDetails(id).subscribe(
+        (res:any)=>{
+          alert(`Deleted details of user with ID ${id}`);
+        },
+        (error:any)=>{
+          console.error('Error', error);  
+        }
+      )
+  }
 
-  
+  Update(item:any){
+    this.router.navigate(['edit/',item.id])
+  }
+
+ 
 }

@@ -1,0 +1,14 @@
+<div class="containerrr">
+    <div class="form">
+      <label for="newName" style="width: 100px;">Name:</label>
+      <input id="newName" name="title" required [(ngModel)]="items.name"><br>
+      <label for="newUsername" style="width: 100px;">Username:</label>
+      <input id="newUsername" name="description" required [(ngModel)]="items.username"><br>
+      <label for="newEmail" style="width: 100px;">Email:</label>
+      <input id="newEmail" name="description" required [(ngModel)]="items.email"><br>
+      <label for="newPhone" style="width: 100px;">Phone:</label>
+      <input id="newPhone" name="description" required [(ngModel)]="items.phone"><br>
+      <button class="btn" (click)="updateDetails()">Update</button>
+    </div>
+  </div>
+  

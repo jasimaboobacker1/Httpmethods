@@ -28,6 +28,15 @@ button{
     color: white;
 
 }
+.delete{
+    width: auto;
+    height: auto;
+    padding: 6px;
+    border:1px solid rgb(218, 35, 35);
+    border-radius: 7px;
+    color:white;
+}
+
 .inp{
     width:180px;
     padding: 5px;
