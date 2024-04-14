@@ -20,6 +20,8 @@ export class ViewComponent  {
   showTable: boolean = false;
   showIdTable:boolean=false;
   userId: number=0;
+  public newName: string = '';
+  public selectedUser: any = {};
 
   constructor(private dataService: DataService,private router:Router) { }
 
@@ -67,5 +69,9 @@ export class ViewComponent  {
     this.router.navigate(['edit/',item.id])
   }
 
- 
+  UpdateName(user:any){
+    this.router.navigate(['patch/',user.id])
+  }
+
+  
 }

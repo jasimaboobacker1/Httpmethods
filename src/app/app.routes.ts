@@ -4,6 +4,7 @@ import { ViewComponent } from './view/view.component';
 import path from 'path';
 import { HomeComponent } from './home/home.component';
 import { EditComponent } from './edit/edit.component';
+import { EditpatchComponent } from './editpatch/editpatch.component';
 
 export const routes: Routes = [
     {
@@ -21,6 +22,10 @@ export const routes: Routes = [
     {
         path:'edit/:id',
         component:EditComponent
+    },
+    {
+        path:'patch/:id',
+        component:EditpatchComponent
     }
    
 ];
