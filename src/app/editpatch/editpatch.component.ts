@@ -30,5 +30,21 @@ export class EditpatchComponent implements OnInit{
     );
   }
 
+  Updatename(){
+    this.Service.updateUserName(this.users.id,{
+      name: this.users.name,
+    })
+    .subscribe((response) => {
+      alert('User details updated successfully. New name: ' + this.users.name);
+      console.log('User Name updated successfully:', response);
+      this.router.navigate(['view']);
+
+    }, (error) => {
+      console.error('Error updating user details:', error);
+    });
+
+
+  }
+
 
 }

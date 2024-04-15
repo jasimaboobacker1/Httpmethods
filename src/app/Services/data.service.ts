@@ -27,6 +27,12 @@ export class DataService {
   updateUserDetails(id: number, newData: any) {
     return this._http.put(`https://jsonplaceholder.typicode.com/users/${id}`, newData);
   }
+
+  updateUserName(id: number, newName: any) {
+    return this._http.patch(`https://jsonplaceholder.typicode.com/users/${id}`, newName);
+  }
+
+  
   
 
 
